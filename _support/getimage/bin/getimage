@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+process.env.DEBUG = 'images:*'
+
+const cli = require('meow')(`
+  Usage:
+    $ yourapp <sheet>
+
+  Options:
+    -o, --output FILE   put it here
+
+  Options:
+    -h, --help          show usage information
+    -v, --version       print version info and exit
+`, {
+  boolean: [
+    'help',
+    'version'
+  ],
+  string: [
+    'output'
+  ],
+  alias: {
+    o: 'output',
+    h: 'help',
+    v: 'version'
+  }
+})
+
+if (!cli.input[0] || !cli.flags.output) {
+  console.warn('usage: yourapp <sheet> --output <file>')
+  process.exit(16)
+}
+
+const App = require('../lib/index')
+
+App.run({
+  sheet: cli.input[0],
+  output: cli.flags.output
+})

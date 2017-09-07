@@ -1,0 +1,4 @@
+exclude:
+  - Makefile
+  - README.md
+  - CONTRIBUTING.md

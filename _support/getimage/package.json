@@ -1,0 +1,17 @@
+{
+  "name": "cheatsheets-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "3.0.1",
+    "meow": "3.7.0",
+    "puppeteer": "0.10.2"
+  }
+}
