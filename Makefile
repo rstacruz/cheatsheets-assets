@@ -16,7 +16,7 @@ SANITY:
 	@if [ ! -e _support/getimage/node_modules ]; then cd _support/get_image/; yarn; fi
 
 TIMESTAMP:
-	@date +"%Y-%m-%d" > _updated.txt
+	@date +"%Y-%m-%dT00:00:00Z" > _updated.txt
 
 DONE:
 	@echo "=> Done."
