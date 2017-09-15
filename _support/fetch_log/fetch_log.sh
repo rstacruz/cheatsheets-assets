@@ -3,7 +3,7 @@ export REPO="./_cheatsheets"
 export SINCE="$(cat _updated.txt)"
 (
   cd "${REPO}"
-  git log --since="${SINCE}" --pretty="" --name-only \
+  git log ${SINCE}..HEAD --pretty="" --name-only \
   | grep -E '\.md$' \
   | grep -v -E 'CONTRIBUTING|README|Readme' \
   | sort \
